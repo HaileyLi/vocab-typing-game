@@ -1,0 +1,71 @@
+
+.upper-row {
+    width: 100%;
+  }
+  
+  .word-lst {
+    display: inline-block;
+    width: 70%;
+    height: 200px;
+    overflow: hidden;
+    background: #cccccc52;
+    border-radius: 9px;
+}
+  
+  .measure {
+    display: inline-block;
+    width: 25%;
+    margin-left: 4%;
+    height: 200px;
+    overflow:hidden;
+  }
+  .typing-area{
+    width:100%;
+    border:1px solid #ccc;
+    margin-top:30px;
+    height: 120px;
+    border-radius: 11px;
+  }
+  
+.typing-single-char {
+    color: red;
+    font-size: 40px;
+    z-index:400;
+  }
+  .origin-single-char {
+    color: #ccc;
+    font-size: 40px;
+    z-index:0;
+  }
+  
+  .typing-container {
+    padding: 30px;
+    padding-left: 50px;
+    position: absolute;
+    z-index:400;
+  }
+  
+  .word-container {
+    padding: 30px;
+    padding-left: 40px;
+  }
+  .origin-word {
+    padding: 30px;
+    padding-left: 50px;
+    position: absolute;
+    z-index:0;
+}
+.the-word {
+  font-size: 40px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.time-cd {
+  background: #404040;
+  color: white;
+  padding: 10px;
+  border-radius: 45px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
