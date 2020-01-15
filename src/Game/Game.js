@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import * as ReactDOM from 'react-dom';
 import './Game.css';
 
 // ES2015 module syntax
 import {
-    Button, ButtonGroup, DropDownButton, DropDownButtonItem,
-    SplitButton, SplitButtonItem, Toolbar, ToolbarItem
+    Button
 } from '@progress/kendo-react-buttons';
 
 
@@ -25,7 +23,7 @@ class game extends Component {
             activeMeaning: this.props.data[0].meaning,
             activeLetters: [],
             completedCount: 0,
-            timer: 0,
+            timer: 30,
             speed: 0
         };
     }
@@ -84,7 +82,18 @@ class game extends Component {
 
 
 
+
+
+
+
         }.bind(this));
+
+        if (this.state.timer <= 0) {
+            this.setState({
+                gameOver: true,
+                gameStart: false
+            });
+        }
     }
 
     componentDidMount() {
@@ -95,14 +104,39 @@ class game extends Component {
                 });
             },
             1000);
+
+        if (this.state.timer <= 0) {
+            this.setState({
+                gameOver: true
+            });
+        }
+
     }
 
     gameStart = () => {
         this.setState({
             gameStart: true,
-            gameOver: false
+            gameOver: false,
+            timer: 30
         });
+
+        this.interval = setInterval(this.timer, 1000);
     }
+
+    timer = () => {
+        let newTime = this.state.timer - 1;
+        this.setState({
+            timer: newTime
+        })
+        if (newTime === 0) {
+            window.clearInterval(this.interval);
+            this.setState({
+                gameStart: false,
+                gameOver: true
+            });
+        }
+    }
+
 
     render() {
         let typingLetters = [];
@@ -144,6 +178,7 @@ class game extends Component {
                     </div></div>
 
                 <div className="measure">
+                    {/* <div className="speed-sec"><RadialGauge {...radialOptions} /></div> */}
                     <div className="time-cd">Time Left: {this.state.timer}</div>
                     <div className="time-cd">Completed:{this.state.completedCount}</div>
                 </div>
@@ -162,13 +197,21 @@ class game extends Component {
 
         gameOverResult = (
             <div>
-                Completed:{this.state.completedCount}
-                <Button primary={true} onClick={this.gameStart}>RESTART</Button>
+                <h1>TIME OUT!</h1>
+                <div className="lower-sec">
+                    <p>You completed typing <h2>{this.state.completedCount}</h2> words.</p>
+                    <Button className="btn" primary={true} onClick={this.gameStart}>RESTART</Button>
+                </div>
             </div>
 
         )
         gameStartSelect = (
-            <div>Vocab Practice and Typing Game<Button primary={true} onClick={this.gameStart}>START</Button></div>
+            <div><h1>TYPING GAME</h1>
+                <div className="lower-sec">
+                    <p>Test your vocab and typing speed at the same time.</p>
+                    <Button className="btn" primary={true} onClick={() => { this.gameStart() }}>START</Button>
+                </div>
+            </div>
         )
 
         return (

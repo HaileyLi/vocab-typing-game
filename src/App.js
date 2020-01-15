@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './App.css';
 import Game from "./Game/Game.js";
 import data from "./data/data.json";
+import '@progress/kendo-theme-default/dist/all.css';
 
 class App extends Component {
   constructor(props) {
