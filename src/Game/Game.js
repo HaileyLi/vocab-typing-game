@@ -50,7 +50,7 @@ class game extends Component {
 
                 var nextWordIndex = this.state.completedCount + 1
 
-                if (nextWordIndex === this.state.data.length) {
+                /* if (nextWordIndex === this.state.data.length) {
                     this.setState({
                         gameOver: true,
                         completedCount: 0,
@@ -62,7 +62,7 @@ class game extends Component {
                         timer: 0,
                         speed: 0
                     })
-                }
+                } */
 
                 if (this.state.activeWord.split("").length === this.state.activeLetters.length) {
                     this.setState({
@@ -119,6 +119,7 @@ class game extends Component {
         if (newTime === 0) {
             window.clearInterval(this.interval);
             this.setState({
+                completedCount: this.state.completedCount,
                 gameStart: false,
                 gameOver: true,
                 activeWord: this.props.data[0].word,
@@ -127,6 +128,24 @@ class game extends Component {
                 timer: 0,
                 speed: 0
             });
+        }
+    }
+
+    rating() {
+        if (this.state.completedCount < 2) {
+            return '😫'
+        }
+        else if (this.state.completedCount < 4) {
+            return '😐'
+        }
+        else if (this.state.completedCount < 6) {
+            return '😊'
+        }
+        else if (this.state.completedCount < 8) {
+            return '😃'
+        }
+        else {
+            return '😎'
         }
     }
 
@@ -192,7 +211,7 @@ class game extends Component {
             <div>
                 <h1>TIME OUT!</h1>
                 <div className="lower-sec">
-                    <p>You completed typing <h2>{this.state.completedCount}</h2> words.</p>
+                    <p>You completed typing <h2>{this.state.completedCount}</h2> words.{this.rating()}</p>
                     <Button className="btn" primary={true} onClick={this.gameStart}>RESTART</Button>
                 </div>
             </div>
