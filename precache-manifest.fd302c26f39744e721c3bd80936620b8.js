@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0ee7c31bb9bb629d6b9ad92fc0c17dc4",
+    "revision": "6b1252f20166cbacae0a2c51608031ab",
     "url": "/vocab-typing-game/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vocab-typing-game/static/css/2.4a9db52e.chunk.css"
   },
   {
-    "revision": "de075350290e2a0e451b",
+    "revision": "4e5c1e612a463799cc20",
     "url": "/vocab-typing-game/static/css/main.0a3ae52f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vocab-typing-game/static/js/2.30d052ad.chunk.js.LICENSE"
   },
   {
-    "revision": "de075350290e2a0e451b",
-    "url": "/vocab-typing-game/static/js/main.c3f2e9e6.chunk.js"
+    "revision": "4e5c1e612a463799cc20",
+    "url": "/vocab-typing-game/static/js/main.4c027517.chunk.js"
   },
   {
     "revision": "c91dd6b8ad23bf5bf716",

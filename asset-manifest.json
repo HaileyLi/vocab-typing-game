@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vocab-typing-game/static/css/main.0a3ae52f.chunk.css",
-    "main.js": "/vocab-typing-game/static/js/main.c3f2e9e6.chunk.js",
-    "main.js.map": "/vocab-typing-game/static/js/main.c3f2e9e6.chunk.js.map",
+    "main.js": "/vocab-typing-game/static/js/main.4c027517.chunk.js",
+    "main.js.map": "/vocab-typing-game/static/js/main.4c027517.chunk.js.map",
     "runtime-main.js": "/vocab-typing-game/static/js/runtime-main.872f2973.js",
     "runtime-main.js.map": "/vocab-typing-game/static/js/runtime-main.872f2973.js.map",
     "static/css/2.4a9db52e.chunk.css": "/vocab-typing-game/static/css/2.4a9db52e.chunk.css",
     "static/js/2.30d052ad.chunk.js": "/vocab-typing-game/static/js/2.30d052ad.chunk.js",
     "static/js/2.30d052ad.chunk.js.map": "/vocab-typing-game/static/js/2.30d052ad.chunk.js.map",
     "index.html": "/vocab-typing-game/index.html",
-    "precache-manifest.5d955769325679989fd97e7dcb2eb3e9.js": "/vocab-typing-game/precache-manifest.5d955769325679989fd97e7dcb2eb3e9.js",
+    "precache-manifest.fd302c26f39744e721c3bd80936620b8.js": "/vocab-typing-game/precache-manifest.fd302c26f39744e721c3bd80936620b8.js",
     "service-worker.js": "/vocab-typing-game/service-worker.js",
     "static/css/2.4a9db52e.chunk.css.map": "/vocab-typing-game/static/css/2.4a9db52e.chunk.css.map",
     "static/css/main.0a3ae52f.chunk.css.map": "/vocab-typing-game/static/css/main.0a3ae52f.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.4a9db52e.chunk.css",
     "static/js/2.30d052ad.chunk.js",
     "static/css/main.0a3ae52f.chunk.css",
-    "static/js/main.c3f2e9e6.chunk.js"
+    "static/js/main.4c027517.chunk.js"
   ]
 }
