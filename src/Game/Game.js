@@ -87,13 +87,6 @@ class game extends Component {
 
 
         }.bind(this));
-
-        if (this.state.timer <= 0) {
-            this.setState({
-                gameOver: true,
-                gameStart: false
-            });
-        }
     }
 
     componentDidMount() {
@@ -105,18 +98,13 @@ class game extends Component {
             },
             1000);
 
-        if (this.state.timer <= 0) {
-            this.setState({
-                gameOver: true
-            });
-        }
-
     }
 
     gameStart = () => {
         this.setState({
             gameStart: true,
             gameOver: false,
+            completedCount: 0,
             timer: 30
         });
 
@@ -132,7 +120,12 @@ class game extends Component {
             window.clearInterval(this.interval);
             this.setState({
                 gameStart: false,
-                gameOver: true
+                gameOver: true,
+                activeWord: this.props.data[0].word,
+                activeMeaning: this.props.data[0].meaning,
+                activeLetters: [],
+                timer: 0,
+                speed: 0
             });
         }
     }
