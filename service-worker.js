@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vocab-typing-game/precache-manifest.a80a14ed3361d921c8e263692490c1ea.js"
+  "/vocab-typing-game/precache-manifest.7fe9deee0dd204980d27957f7066e011.js"
 );
 
 self.addEventListener('message', (event) => {
