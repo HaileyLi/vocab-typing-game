@@ -20,7 +20,7 @@ class game extends Component {
             gameOver: false,
             data: this.props.data,
             activeWord: this.props.data[0].word,
-            activeMeaning: this.props.data[0].meaning,
+            activeMeaning: this.props.data[0].translation,
             activeLetters: [],
             completedCount: 0,
             timer: 30,
@@ -48,8 +48,8 @@ class game extends Component {
                     })
                 }
 
-                var nextWordIndex = this.state.completedCount + 1
-
+                var nextWordIndex = Math.floor(1 + (Math.random() * (103975)));
+                var completedWords = this.state.completedCount + 1;
                 /* if (nextWordIndex === this.state.data.length) {
                     this.setState({
                         gameOver: true,
@@ -66,9 +66,9 @@ class game extends Component {
 
                 if (this.state.activeWord.split("").length === this.state.activeLetters.length) {
                     this.setState({
-                        completedCount: nextWordIndex,
+                        completedCount: completedWords,
                         activeWord: this.state.data[nextWordIndex].word,
-                        activeMeaning: this.state.data[nextWordIndex].meaning,
+                        activeMeaning: this.state.data[nextWordIndex].translation,
                         activeLetters: []
 
                     })
@@ -123,7 +123,7 @@ class game extends Component {
                 gameStart: false,
                 gameOver: true,
                 activeWord: this.props.data[0].word,
-                activeMeaning: this.props.data[0].meaning,
+                activeMeaning: this.props.data[0].translation,
                 activeLetters: [],
                 timer: 0,
                 speed: 0
