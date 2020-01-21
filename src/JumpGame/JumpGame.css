@@ -1,0 +1,108 @@
+.ground {
+    width: 100%;
+    background: black;
+    height: 6px;
+    z-index: 400;
+}
+
+.character {
+    width: 30px;
+    height: 30px;
+    background: black;
+    margin-top: -34px;
+    position:absolute;
+    transition: all 1s;
+}
+.jump-area {
+    margin-top: 50px;
+}
+
+.life {
+    width: 142px;
+    font-size: 30px;
+    display:inline-block;
+}
+
+.score {
+    width: 335px;
+    font-size: 35px;
+    float: right;
+}
+
+.jump {
+    transition: all 0.5s;
+    animation-name: jump;
+    animation-duration: 0.8s;
+    animation-timing-function:ease-in-out;
+}
+
+
+  @keyframes jump {
+    0% {
+        margin-top: -34px;
+    }
+    50% {
+        margin-top: -105px;
+    }
+    100% {
+        margin-top: -34px;
+    }
+  }
+
+  .run {
+    transition: all 0.5s;
+    animation-name: run;
+    animation-duration: 0.8s;
+    animation-timing-function:ease-in-out;
+}
+
+
+  @keyframes run {
+    0% {
+        margin-top: -34px;
+    }
+    50% {
+        margin-top: -110px;
+    }
+    100% {
+        margin-top: -34px;
+    }
+  }
+  .mountain {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background: black;
+    margin-top: -54px;
+}
+
+  /* .mountain {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background: black;
+    margin-top: -54px;
+    transition: all 0.5s;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+} */
+/* 
+@keyframes move {
+    0% {
+        right:20%;
+    }
+    50% {
+        right:50%;
+    }
+    100% {
+        right:78%;
+    }
+  } */
+
+  .middle-row {
+    text-align: center;
+    padding: 40px;
+    font-size: 35px;
+}

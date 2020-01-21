@@ -7,8 +7,6 @@ import {
 } from '@progress/kendo-react-buttons';
 
 
-// ES2015 module syntax
-import { RadialGauge } from '@progress/kendo-react-gauges';
 
 
 class game extends Component {
@@ -34,7 +32,7 @@ class game extends Component {
             e.preventDefault();
 
             if (e.which >= 65 && e.which <= 90) {
-                if (this.state.activeLetters.length == 0) {
+                if (this.state.activeLetters.length === 0) {
                     if (this.state.activeWord[0] === e.key) {
                         var newLetter = this.state.activeLetters.concat(e.key)
                         this.setState({
@@ -42,7 +40,8 @@ class game extends Component {
                         })
                     }
                 } else if (this.state.activeWord[this.state.activeLetters.length] === e.key) {
-                    var newLetter = this.state.activeLetters.concat(e.key)
+                    let newLetter;
+                    newLetter = this.state.activeLetters.concat(e.key)
                     this.setState({
                         activeLetters: newLetter
                     })
@@ -174,11 +173,11 @@ class game extends Component {
             actualLetters.push(<span className="origin-single-char" key={i} >{item}</span>)
         });
 
-        const radialOptions = {
+        /* const radialOptions = {
             pointer: {
                 value: this.state.value
             }
-        };
+        }; */
 
         gameBoard = (<div>
             <div className="upper-row">
